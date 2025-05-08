@@ -78,7 +78,7 @@ void setup() {
     NULL,         // Parámetros
     1,            // Prioridad
     NULL,         // Handle
-    1             // Núcleo (puedes usar 0 también)
+    1             // Núcleo esp
   );
 }
 
