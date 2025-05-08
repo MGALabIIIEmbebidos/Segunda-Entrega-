@@ -8,7 +8,7 @@
 #define DHTTYPE DHT22
 DHT dht(DHTPIN, DHTTYPE);
 
-// —— MAC del receptor ——
+// —— MAC del Nodo Edge ——
 uint8_t receiverMAC[] = {0x5c, 0x01, 0x3b, 0x72, 0xf2, 0xcc};
 
 // —— Estructura de datos a enviar ——
@@ -77,7 +77,7 @@ void setup() {
     return;
   }
 
-  // Crear tarea de sensor DHT
+  // tarea de sensor DHT
   xTaskCreatePinnedToCore(
     DHTSensorTask,
     "DHTSensorTask",
