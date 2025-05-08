@@ -85,7 +85,7 @@ void setup() {
     NULL,
     1,
     NULL,
-    1  // Puedes usar 0 para el otro núcleo
+    1  
   );
 }
 
