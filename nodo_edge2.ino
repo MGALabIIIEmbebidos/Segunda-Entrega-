@@ -6,12 +6,12 @@
 #include "esp_wifi.h"
 
 // WiFi
-const char* ssid     = "iPhone";
-const char* password = "25310tati";
+const char* ssid     = "nombre red";
+const char* password = "contraseña";
 
 // Telegram
-#define BOTtoken  "7672713502:AAH55Vyi1rU-EF1eij3dnpqYvRMLxzsE58g"
-#define CHAT_ID   "5365006160"
+#define BOTtoken  "xxxxxxxxx:CXTVVGYCC"
+#define CHAT_ID   "XXXXXXXXX"
 WiFiClientSecure client;
 UniversalTelegramBot bot(BOTtoken, client);
 
