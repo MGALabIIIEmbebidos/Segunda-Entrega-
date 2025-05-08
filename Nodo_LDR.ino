@@ -8,7 +8,7 @@
 // Canal WiFi
 const uint8_t canal = 6;
 
-// MAC del receptor (ajústala según el receptor real)
+// MAC del nodo Edge
 uint8_t receiverMAC[] = {0x5c, 0x01, 0x3b, 0x72, 0xf2, 0xcc};
 
 // Estructura de envío
@@ -18,7 +18,7 @@ typedef struct {
 
 struct_message_send sensorSend;
 
-// Tarea para lectura y envío del LDR
+// Tarea para lectura y envío
 void LDRTask(void *parameter) {
   for (;;) {
     int ldr = analogRead(LDR_PIN);
@@ -70,11 +70,10 @@ void setup() {
     return;
   }
 
-  // Crear tarea para manejar el LDR
   xTaskCreatePinnedToCore(
     LDRTask,      // Función de la tarea
     "LDRTask",    // Nombre
-    2048,         // Stack
+    2048,         // memoria
     NULL,         // Parámetros
     1,            // Prioridad
     NULL,         // Handle
@@ -83,5 +82,5 @@ void setup() {
 }
 
 void loop() {
-  vTaskDelay(portMAX_DELAY);  // Nada que hacer aquí
+  vTaskDelay(portMAX_DELAY); 
 }
