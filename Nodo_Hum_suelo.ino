@@ -83,7 +83,7 @@ void setup() {
     return;
   }
 
-  // Crear tarea de sensor
+  // tarea 
   xTaskCreatePinnedToCore(
     SoilSensorTask,
     "SoilSensorTask",
@@ -96,5 +96,5 @@ void setup() {
 }
 
 void loop() {
-  vTaskDelay(portMAX_DELAY);  // Nada que hacer aquí
+  vTaskDelay(portMAX_DELAY);  
 }
